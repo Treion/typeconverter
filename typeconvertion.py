@@ -23,7 +23,16 @@ elif startInput == "i":
 elif startInput == "f":
     inputvalue = float(input("YOU ARE ENTERING A FLOAT VALUE \nEnter a number: "))
 elif startInput == "b":
-    inputvalue = input("YOU ARE ENTERING A BOOLEAN VALUE \nEnter True or False: ").lower() == "true"
+    while True:
+        inputvalue = input("YOU ARE ENTERING A BOOLEAN VALUE \nEnter True or False: ").lower()
+        if inputvalue == "true":
+            inputvalue = True
+            break
+        elif inputvalue == "false":
+            inputvalue = False
+            break
+        else:
+            print("You have to input either True or False")
 elif startInput == "c":
     inputvalue = input("YOU ARE ENTERING A CHARACTER VALUE \nEnter a character: ")[0]
 else:
